@@ -38,7 +38,7 @@ function connectToNewUser(userId,stream){
 }
 function addvideostream (video,stream){
     video.srcObject = stream
-    video.addEvenListener("loadmetadata",()=>{
+    video.addEventListener("loadmetadata",()=>{
         video.play()
         $("#video_grid").append(video)
     })
